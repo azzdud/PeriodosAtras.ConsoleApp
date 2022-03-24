@@ -7,6 +7,7 @@ namespace PeriodosAtras.ConsoleApp
         static void Main(string[] args)
         {   
             //Data data = new Data();
+            int resultado;
             DateTime dataHJ = new DateTime();
             DateTime dataInput = new DateTime();
 
@@ -15,10 +16,22 @@ namespace PeriodosAtras.ConsoleApp
 
             Console.WriteLine("Para saber um intervalo de tempo, digite a data em questão: ");
             dataInput = Convert.ToDateTime(Console.ReadLine());
-            
-            Console.WriteLine("A diferença de dias é: " + (dataHJ - dataInput).Days + " dias.");
 
-            Console.ReadLine();
+            resultado = (dataHJ - dataInput).Days;
+
+            if (resultado < 30)
+            {
+                Console.WriteLine("A diferença é de: " + (dataHJ - dataInput).Days + " dias.");
+
+                Console.ReadLine();
+            }
+
+            else if (resultado > 30)
+            {
+                Console.WriteLine("A diferença é de: " + (dataHJ - dataInput).Days + " dias.");
+
+                Console.ReadLine();
+            }
         }
     }
 
